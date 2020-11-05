@@ -1,0 +1,44 @@
+// This program asks the user for a non-negative long and displays each digit
+// Written by: Ayden Holgate
+// Date: Nov. 3, 2020
+
+// chapter4Exercise7Digits.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+# include <iostream>;
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{// Start of program
+	long divisor = 10, test_num = 0, quotient = 0;
+	
+	cout << "Enter an integer: ";
+	cin >> test_num;
+
+	while (divisor < test_num){
+		divisor = divisor * 10;
+	}
+
+	while (test_num / divisor <= 0){
+		divisor = divisor / 10;
+	}
+
+	cout << "The digits of the integer are: ";
+	while (divisor > 0){
+		quotient = test_num / divisor;
+
+	if (quotient == 0){}
+
+	else
+		cout << "\n" << quotient << " ";
+		test_num = test_num % divisor;
+		divisor = divisor / 10;
+}
+	cout << endl;
+
+	
+	//cout << digit1 << "\n" << digit2 << "\n" << digit3  << digit4 << endl;
+	
+	return 0;
+}// End of program
